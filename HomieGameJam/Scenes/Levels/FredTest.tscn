@@ -8,13 +8,16 @@
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 352, 82 )
-JumpSpeed = -2500.0
+Speed = 45
+JumpSpeed = 30.0
+Gravity = 1750
 
 [node name="Platform" parent="." instance=ExtResource( 2 )]
 position = Vector2( 43, 154 )
 scale = Vector2( 8, 1 )
 
-[node name="Player2" parent="." instance=ExtResource( 3 )]
+[node name="NOTPLAYER" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 145, 73 )
 Speed = 20
 JumpSpeed = -50.0
