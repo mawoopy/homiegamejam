@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/margerine_placeholder.png-05c3bb16170ca35f85c82ca306b9ae99.stex"
+path="res://.import/platform.png-5a3e29f4828ac70112aa28df2a13f14d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/Characters/Margerine/margerine_placeholder.png"
-dest_files=[ "res://.import/margerine_placeholder.png-05c3bb16170ca35f85c82ca306b9ae99.stex" ]
+source_file="res://Visuals/Objects/platform.png"
+dest_files=[ "res://.import/platform.png-5a3e29f4828ac70112aa28df2a13f14d.stex" ]
 
 [params]
 
