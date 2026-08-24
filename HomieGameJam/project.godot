@@ -11,7 +11,12 @@ config_version=4
 [application]
 
 config/name="Homie Game Jam"
+run/main_scene="res://Scenes/Levels/TestSceneSwitch.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SceneManager="*res://Scripts/SceneManager.cs"
 
 [display]
 
