@@ -34,7 +34,7 @@ public class Player : KinematicBody2D
 
 	public override void _PhysicsProcess(float delta)
 	{
-		_velocity = Vector2.Zero;
+		
 
 		if(!IsOnFloor())
 		{
@@ -53,14 +53,14 @@ public class Player : KinematicBody2D
 
 			if (Input.IsActionJustPressed("jump"))
 			{
-			_velocity.y += JumpSpeed;
+			_velocity.y = JumpSpeed;
 			}
 			
 		}
 
 		
 		
-
+		
 		
 
 
@@ -87,6 +87,8 @@ public class Player : KinematicBody2D
 		
 		//MoveAndCollide(_velocity * (float)delta);
 		MoveAndSlide(_velocity, Vector2.Up);
+
+		
 
 	}
 
