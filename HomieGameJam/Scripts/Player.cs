@@ -5,7 +5,6 @@ public class Player : KinematicBody2D
 {
 	public Vector2 ScreenSize; // Size of the game window.
 
-
 	[Export]
 	public int Speed {get; set;} = 100; // How fast the player will move (pixels/sec).
 	[Export]
@@ -78,6 +77,7 @@ public class Player : KinematicBody2D
 			if (Input.IsActionJustPressed("jump"))
 			{
 				//_velocity.y = -JumpSpeed;
+				
 				MoveAndCollide(new Vector2(0, -JumpSpeed));
 				
 			}
