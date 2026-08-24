@@ -16,10 +16,16 @@ public class Player : KinematicBody2D
 
 	private AnimatedSprite _animatedSprite;
 
+	private float _jumpHeight = 100f;
+
+	private Vector2 _jumpTargetPosition;
+
+	public bool CanInteract; 
+
 	public override void _Ready()
 	{
 		ScreenSize = GetViewportRect().Size;
-
+	
 		_animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
 		
 		_animatedSprite.Play("idle");
@@ -29,7 +35,7 @@ public class Player : KinematicBody2D
 
 	public override void _Process(float delta)
 	{
-		GD.Print(IsOnFloor());
+		//GD.Print(IsOnFloor());
 
 		if (_velocity.x != 0)
 		{
@@ -58,7 +64,7 @@ public class Player : KinematicBody2D
 		}
 		else
 		{
-			GD.Print("On Floor");
+			
 			_velocity.y = 0;
 			if (Input.IsActionPressed("move_right"))
 			{
@@ -74,11 +80,32 @@ public class Player : KinematicBody2D
 			}
 
 
-			if (Input.IsActionJustPressed("jump"))
+			
+
+			if(Input.IsActionJustPressed("jump") && Input.IsActionPressed("move_down"))
+			{
+				if (GetNode<Area2D>("FallableCheck").GetOverlappingAreas().Count > 0)
+				{
+					GetNode<CollisionShape2D>("Hitbox").Disabled = true;
+					_jumpTargetPosition = new Vector2(Position.x, Position.y +_jumpHeight/2);
+					Position = Position.LinearInterpolate(_jumpTargetPosition, 0.5f);
+				}
+
+				
+			}
+			else if (Input.IsActionJustPressed("jump"))
 			{
 				//_velocity.y = -JumpSpeed;
-				
-				MoveAndCollide(new Vector2(0, -JumpSpeed));
+				//MoveAndCollide(new Vector2(0, -JumpSpeed));
+
+				GetNode<CollisionShape2D>("Hitbox").Disabled = true;
+				Vector2 jumpTargetPosition = new Vector2(Position.x, Position.y - _jumpHeight);
+				Position = Position.LinearInterpolate(jumpTargetPosition, 0.5f);
+
+				if (Position.y >= jumpTargetPosition.y)
+				{
+					GetNode<CollisionShape2D>("Hitbox").Disabled = false;
+				}
 				
 			}
 			
@@ -86,8 +113,11 @@ public class Player : KinematicBody2D
 		}
 
 
-
-
+			
+		if (Position.y <= _jumpTargetPosition.y)
+				{
+					GetNode<CollisionShape2D>("Hitbox").Disabled = false;
+				}
 
 
 
@@ -122,8 +152,7 @@ public class Player : KinematicBody2D
 		}
 		//MoveAndCollide(_velocity * (float)delta);
 		MoveAndSlide(_velocity, Vector2.Up,infiniteInertia:false);
-		GD.Print(_velocity);
-		
+		 
 
 	}
 
