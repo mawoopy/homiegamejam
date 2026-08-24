@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Gaming HARD.png-ebe6052344364d75fc62d43e70e97972.stex"
+path="res://.import/phase 2- BG 1.png-448fc180ac4f317c85ac0a7438faad6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Gaming HARD.png"
-dest_files=[ "res://.import/Gaming HARD.png-ebe6052344364d75fc62d43e70e97972.stex" ]
+source_file="res://Visuals/Backgrounds/phase 2- BG 1.png"
+dest_files=[ "res://.import/phase 2- BG 1.png-448fc180ac4f317c85ac0a7438faad6f.stex" ]
 
 [params]
 

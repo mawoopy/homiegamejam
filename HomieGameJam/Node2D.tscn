@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Textures/Gaming HARD.png" type="Texture" id=1]
-
-[node name="Node2D" type="Node2D"]
-
-[node name="GamingHard" type="Sprite" parent="."]
-position = Vector2( -311, -186 )
-texture = ExtResource( 1 )
