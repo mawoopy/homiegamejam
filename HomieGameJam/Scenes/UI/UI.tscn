@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/UI/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Visuals/Objects/TXT.png" type="Texture" id=2]
@@ -11,8 +11,12 @@
 [ext_resource path="res://Visuals/Objects/QUIT.png" type="Texture" id=9]
 [ext_resource path="res://Audio/DrPhilAudio/go kill yourself.wav" type="AudioStream" id=10]
 [ext_resource path="res://Audio/DrPhilAudio/shut the hell up bitch.wav" type="AudioStream" id=11]
+[ext_resource path="res://Audio/Soundtrack/Title.wav" type="AudioStream" id=12]
+[ext_resource path="res://Visuals/Backgrounds/CREDITS.png" type="Texture" id=13]
+[ext_resource path="res://Audio/DrPhilAudio/narcissistic bitch.wav" type="AudioStream" id=14]
+[ext_resource path="res://Visuals/Objects/Back.png" type="Texture" id=15]
 
-[node name="UI" type="Panel"]
+[node name="MainMenu" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -121,12 +125,48 @@ texture = ExtResource( 9 )
 stream = ExtResource( 10 )
 volume_db = 10.0
 
-[node name="ShutTheHellUpBitch" type="AudioStreamPlayer" parent="."]
+[node name="NarcissisticBitch" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 555, 195 )
+scale = Vector2( 1.5, 1.5 )
+stream = ExtResource( 14 )
+volume_db = 10.0
+
+[node name="Title" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+
+[node name="CreditsBG" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Credits" type="Sprite" parent="CreditsBG"]
+position = Vector2( 240.743, 137 )
+scale = Vector2( 0.496377, 0.496377 )
+texture = ExtResource( 13 )
+
+[node name="Back" type="Button" parent="CreditsBG"]
+margin_left = 391.0
+margin_top = 239.0
+margin_right = 436.0
+margin_bottom = 259.0
+
+[node name="ButtonClick4" type="Sprite" parent="CreditsBG/Back"]
+position = Vector2( 164, -44 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 4 )
+
+[node name="Back" type="Sprite" parent="CreditsBG/Back/ButtonClick4"]
+position = Vector2( 2, -0.666641 )
+texture = ExtResource( 15 )
+
+[node name="ShutTheHellUpBitch" type="AudioStreamPlayer" parent="CreditsBG"]
 stream = ExtResource( 11 )
 
+[connection signal="ready" from="." to="Title" method="play"]
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="Options" to="GoKillYourself" method="play"]
 [connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
-[connection signal="pressed" from="Credits" to="ShutTheHellUpBitch" method="play"]
+[connection signal="pressed" from="Credits" to="NarcissisticBitch" method="play"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="CreditsBG/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="CreditsBG/Back" to="CreditsBG/ShutTheHellUpBitch" method="play"]
