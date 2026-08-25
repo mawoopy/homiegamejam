@@ -1,0 +1,270 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Tools/SceneManager.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Objects/Ground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Visuals/Objects/Final Assets/door final.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Visuals/Backgrounds/phase1-1.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Objects/Platform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Visuals/Objects/Final Assets/platform left.jpg" type="Texture" id=8]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/placeholder platform 2.png-db05f1b73d300cf591335fd6466dc2e3.stex"
+
+[node name="Level1" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 240, 135 )
+texture = ExtResource( 6 )
+
+[node name="DoorFinal" type="Sprite" parent="Background"]
+position = Vector2( 196, 109 )
+texture = ExtResource( 4 )
+
+[node name="DoorFinal2" type="Sprite" parent="Background"]
+position = Vector2( 93, 111 )
+texture = ExtResource( 4 )
+
+[node name="DoorFinal3" type="Sprite" parent="Background"]
+position = Vector2( -11, 109 )
+texture = ExtResource( 4 )
+
+[node name="DoorFinal4" type="Sprite" parent="Background"]
+position = Vector2( 193, 16 )
+texture = ExtResource( 4 )
+
+[node name="DoorFinal5" type="Sprite" parent="Background"]
+position = Vector2( 192, -73 )
+texture = ExtResource( 4 )
+
+[node name="DoorFinal6" type="Sprite" parent="Background"]
+position = Vector2( 89, -73 )
+texture = ExtResource( 4 )
+
+[node name="DoorFinal7" type="Sprite" parent="Background"]
+position = Vector2( -8, -73 )
+texture = ExtResource( 4 )
+
+[node name="DoorFinal8" type="Sprite" parent="Background"]
+position = Vector2( -7, 12 )
+texture = ExtResource( 4 )
+
+[node name="Door" parent="Background" instance=ExtResource( 5 )]
+position = Vector2( 196, 110 )
+SceneToLoad = "FredTest"
+ENtrancePosition = Vector2( 425, 128 )
+
+[node name="Door2" parent="Background" instance=ExtResource( 5 )]
+position = Vector2( 94, 110 )
+SceneToLoad = "FredTest"
+ENtrancePosition = Vector2( 425, 128 )
+
+[node name="Door3" parent="Background" instance=ExtResource( 5 )]
+position = Vector2( -9, 109 )
+SceneToLoad = "FredTest"
+ENtrancePosition = Vector2( 425, 128 )
+
+[node name="Door4" parent="Background" instance=ExtResource( 5 )]
+position = Vector2( -7, 11 )
+SceneToLoad = "FredTest"
+ENtrancePosition = Vector2( 425, 128 )
+
+[node name="Door5" parent="Background" instance=ExtResource( 5 )]
+position = Vector2( -7, -74 )
+SceneToLoad = "FredTest"
+ENtrancePosition = Vector2( 425, 128 )
+
+[node name="Door6" parent="Background" instance=ExtResource( 5 )]
+position = Vector2( 90, -76 )
+SceneToLoad = "FredTest"
+ENtrancePosition = Vector2( 425, 128 )
+
+[node name="Door7" parent="Background" instance=ExtResource( 5 )]
+position = Vector2( 193, -73 )
+SceneToLoad = "FredTest"
+ENtrancePosition = Vector2( 425, 128 )
+
+[node name="Door8" parent="Background" instance=ExtResource( 5 )]
+position = Vector2( 193, 16 )
+SceneToLoad = "FredTest"
+ENtrancePosition = Vector2( 425, 128 )
+
+[node name="SceneManager" parent="." instance=ExtResource( 2 )]
+
+[node name="Ground" parent="." instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 241, 294 )
+scale = Vector2( 10.268, 0.999 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 83, 237 )
+
+[node name="Platform" parent="." instance=ExtResource( 7 )]
+position = Vector2( 305, 128 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 310, 164 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform2"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform2"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 308, 198 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform3"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform3"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 360, 109 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform4"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform4"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 257, 109 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform5"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform5"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 305, 90 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform6"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform6"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform7" parent="." instance=ExtResource( 7 )]
+position = Vector2( 411, 180 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform7"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform7"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 411, 90 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform8"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform8"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform9" parent="." instance=ExtResource( 7 )]
+position = Vector2( 210, 92 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform9"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform9"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform10" parent="." instance=ExtResource( 7 )]
+position = Vector2( 209, 176 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform10"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform10"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform11" parent="." instance=ExtResource( 7 )]
+position = Vector2( 413, 208 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform11"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform11"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
+
+[node name="Platform12" parent="." instance=ExtResource( 7 )]
+position = Vector2( 209, 209 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform12"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 8 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform12"]
+position = Vector2( 24, 3 )
+texture = SubResource( 1 )
