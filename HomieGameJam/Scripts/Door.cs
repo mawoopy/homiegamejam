@@ -8,7 +8,6 @@ public string SceneToLoad;
 
 [Export]
 public Vector2 ENtrancePosition;
-
 public bool CanInteract;
 [Export]
 public int Id;
@@ -27,18 +26,18 @@ public int Id;
     public void LoadScene()
     {
         GD.Print("KILL YOURSELF");
-        GetNode<SceneManager>("/root/SceneManager").ChangeScene((SceneNames)Enum.Parse(typeof(SceneNames), SceneToLoad));   
-        //GetNode<SceneManager>("/root/SceneManager").SetCurrentDoorId(Id);
-        GD.Print("Id Set to: " + Id);
+        //GetNode<SceneManager>("/root/SceneManager").ChangeScene((SceneNames)Enum.Parse(typeof(SceneNames), SceneToLoad));   
+        // SceneManager.Instance.
+        // //GetNode<SceneManager>("/root/SceneManager").SetCurrentDoorId(Id);
+        // GD.Print("Id Set to: " + Id);
     }
-
     public override void _PhysicsProcess(float delta)
     {
         
         CheckIfCanInteract();
         if (CanInteract && Input.IsActionJustPressed("move_up"))
         {
-            GetNode<SceneManager>("/root/SceneManager").SetCurrentDoorId(Id);
+            SceneManager.Instance.ChangeSceneWithId(Id);
         }
          
     }
@@ -51,6 +50,7 @@ public int Id;
 			{
 
 				CanInteract = true;
+                SceneManager.Instance.SetCurrentDoorId(Id);
 
 				
 			}
@@ -59,6 +59,5 @@ public int Id;
                 CanInteract = false;
             }
     }
-
 
 }

@@ -183,6 +183,7 @@ visible = false
 position = Vector2( 80, 171 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
+Id = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 76, 172 )

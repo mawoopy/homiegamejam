@@ -30,7 +30,7 @@ public class Player : KinematicBody2D
 
 	private AnimatedSprite _animatedSprite;
 
-	private float _jumpHeight = 100f;
+	private float _jumpHeight = 200f;
 
 	private Vector2 _jumpTargetPosition;
 
