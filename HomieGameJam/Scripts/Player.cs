@@ -12,8 +12,6 @@ public enum DeathState
 }
 public class Player : KinematicBody2D
 {
-	public static Player Instance; // Singleton instance of the player.
-	public static DeathState CurrentDeathState;
 	public Vector2 ScreenSize; // Size of the game window.
 	
 	[Export]
@@ -30,33 +28,22 @@ public class Player : KinematicBody2D
 
 	private AnimatedSprite _animatedSprite;
 
-	private float _jumpHeight = 200f;
+	private float _jumpHeight = 100f;
 
 	private Vector2 _jumpTargetPosition;
 
 	public bool CanInteract = false; 
 
-	private Area2D _interactCheckArea;
-
 	public override void _Ready()
 	{
-		// if(Instance != null)
-        // {
-        // 	QueueFree();
-
-        // }
-        // else
-        // {
-        //     Instance = this; 
-        // }
 		ScreenSize = GetViewportRect().Size;
 	
 		_animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
 		
 		_animatedSprite.Play("idle");
-		//GD.Print(Position.ToString());
+
 	}
-	
+
 
 	public override void _Process(float delta)
 	{
@@ -76,7 +63,6 @@ public class Player : KinematicBody2D
 		{
 			_animatedSprite.Play("idle");
 		}
-		//GD.Print("Player Position: " + Position.ToString());
 	}
 
 	public override void _PhysicsProcess(float delta)
@@ -110,8 +96,6 @@ public class Player : KinematicBody2D
 			{
 
 				CanInteract = true;
-
-				_interactCheckArea = GetNode<Area2D>("InteractCheck").GetOverlappingAreas()[0] as Area2D;
 				//GD.Print("Can Interact");
 				
 			}
@@ -121,10 +105,10 @@ public class Player : KinematicBody2D
 			}
 			
 
-			if(Input.IsActionJustPressed("move_up") && CanInteract)
+			if(Input.IsActionJustPressed("jump") && CanInteract || Input.IsActionJustPressed("move_up") && CanInteract)
 			{
-				//EmitSignal("EnterRoomEventHandler");
-				//_interactCheckArea.GetScript().Call("LoadScene");
+				EmitSignal("EnterRoomEventHandler");
+
 
 			}
 			else if(Input.IsActionJustPressed("jump") && Input.IsActionPressed("move_down"))
