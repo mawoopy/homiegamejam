@@ -1,6 +1,15 @@
 using Godot;
 using System;
 
+
+
+public enum DeathState
+{
+	Phase1,
+	Phase2,
+	Phase3,
+	Phase4,
+}
 public class Player : KinematicBody2D
 {
 	public Vector2 ScreenSize; // Size of the game window.
@@ -174,10 +183,7 @@ public class Player : KinematicBody2D
 		//MoveAndCollide(_velocity * (float)delta);
 		MoveAndSlide(_velocity, Vector2.Up,infiniteInertia:false);}
 
-		private void OnButtonPressed()
-		{
-			GD.Print("Button Pressed");
-		}
+		
 
 
 		 
