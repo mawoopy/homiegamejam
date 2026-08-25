@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Tools/SceneManager.tscn" type="PackedScene" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Visuals/Backgrounds/phase1-3.png" type="Texture" id=6]
 [ext_resource path="res://Visuals/Objects/Final Assets/PLATFORM_2.1_.png" type="Texture" id=7]
+[ext_resource path="res://Visuals/Objects/Final Assets/VatofAcid.png" type="Texture" id=8]
+[ext_resource path="res://Visuals/Objects/Final Assets/platform left.jpg" type="Texture" id=9]
+[ext_resource path="res://Visuals/Objects/Final Assets/Platforms/placeholder platform 2.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Objects/Platform.tscn" type="PackedScene" id=11]
 
 [node name="Level1" type="Node2D"]
 
@@ -22,18 +26,42 @@ position = Vector2( 240, 146 )
 scale = Vector2( 10.268, 0.999 )
 
 [node name="Door2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 40, 98 )
+position = Vector2( 239, 193 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 83, 95 )
-
-[node name="DoorFinal" type="Sprite" parent="."]
-position = Vector2( 40, 99 )
+[node name="DoorFinal2" type="Sprite" parent="Door2"]
+position = Vector2( 0, 1 )
 texture = ExtResource( 4 )
 
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 244, 193 )
+
+[node name="VatofAcid" type="Sprite" parent="."]
+position = Vector2( 238, 250 )
+scale = Vector2( 0.877599, 0.821738 )
+texture = ExtResource( 8 )
+
 [node name="Platform21" type="Sprite" parent="."]
+visible = false
 position = Vector2( 239.5, 199 )
 scale = Vector2( 10.1458, 9.5 )
 texture = ExtResource( 7 )
+
+[node name="Platform2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 216, 223 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform2"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 9 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform2"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 10 )
+
+[node name="Ground2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 241, 293 )
+scale = Vector2( 10.268, 0.999 )
