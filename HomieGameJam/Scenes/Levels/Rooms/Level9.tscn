@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Tools/SceneManager.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Objects/Platform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Visuals/Backgrounds/phase3-3.png" type="Texture" id=6]
+[ext_resource path="res://Visuals/Objects/Final Assets/door final.png" type="Texture" id=7]
 
 [node name="Level1" type="Node2D"]
 
@@ -13,27 +14,174 @@
 position = Vector2( 240, 135 )
 texture = ExtResource( 6 )
 
+[node name="DoorFinal" type="Sprite" parent="Background"]
+position = Vector2( -161, 42 )
+texture = ExtResource( 7 )
+
 [node name="SceneManager" parent="." instance=ExtResource( 2 )]
 
 [node name="Ground" parent="." instance=ExtResource( 3 )]
-position = Vector2( 240, 288 )
+position = Vector2( 240, 294 )
 scale = Vector2( 10.268, 0.999 )
 
 [node name="Platform" parent="." instance=ExtResource( 4 )]
-position = Vector2( 149, 163 )
+visible = false
+position = Vector2( 147, 162 )
+
+[node name="Platform6" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 49, 32 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform7" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 31, 41 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform8" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 67, 42 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform9" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 80, 48 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform10" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 304, 78 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform11" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 296, 171 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform12" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 380, 195 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform13" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 402, 206 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform14" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 352, 204 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform17" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 337, 236 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform18" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 374, 160 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform19" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 447, 166 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform20" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 421, 101 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform21" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 267, 31 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform22" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 168, 64 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform23" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 144, 41 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform24" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 151, 14 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform25" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 123, 243 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform26" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 154, 228 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform27" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 260, 217 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform28" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 245, 247 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform29" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 267, 254 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform30" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 294, 252 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform31" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 316, 217 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform15" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 365, 104 )
+scale = Vector2( 0.499, 1 )
+
+[node name="Platform16" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 205, 29 )
+scale = Vector2( 0.723, 1 )
+
+[node name="Platform4" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 360, 42 )
+scale = Vector2( 1.299, 1 )
+
+[node name="Platform5" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 370, 125 )
+scale = Vector2( 1.622, 1 )
+
+[node name="Platform3" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 184, 93 )
+scale = Vector2( 1.837, 1 )
 
 [node name="Platform2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 72, 196 )
+position = Vector2( 45, 199 )
+scale = Vector2( 1.425, 1 )
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
-position = Vector2( 416, 238 )
-SceneToLoad = "FredTest"
-ENtrancePosition = Vector2( 425, 128 )
-
-[node name="Door2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 40, 240 )
+visible = false
+position = Vector2( 80, 171 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 83, 237 )
+position = Vector2( 76, 172 )

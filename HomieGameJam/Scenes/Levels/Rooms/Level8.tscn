@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Tools/SceneManager.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/Objects/Platform.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Visuals/Backgrounds/phase3-2.png" type="Texture" id=6]
+[ext_resource path="res://Visuals/Objects/Final Assets/door final.png" type="Texture" id=7]
 
 [node name="Level1" type="Node2D"]
 
@@ -13,27 +14,56 @@
 position = Vector2( 240, 135 )
 texture = ExtResource( 6 )
 
+[node name="DoorFinal" type="Sprite" parent="Background"]
+position = Vector2( -183, -19 )
+texture = ExtResource( 7 )
+
+[node name="DoorFinal2" type="Sprite" parent="Background"]
+position = Vector2( -33, 34 )
+texture = ExtResource( 7 )
+
 [node name="SceneManager" parent="." instance=ExtResource( 2 )]
 
 [node name="Ground" parent="." instance=ExtResource( 3 )]
-position = Vector2( 240, 288 )
+visible = false
+position = Vector2( 241, 293 )
 scale = Vector2( 10.268, 0.999 )
 
-[node name="Platform" parent="." instance=ExtResource( 4 )]
-position = Vector2( 149, 163 )
+[node name="Platform" parent="Ground" instance=ExtResource( 4 )]
+position = Vector2( -23.5684, -155.155 )
+scale = Vector2( 0.161375, 1.11211 )
 
-[node name="Platform2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 72, 196 )
+[node name="Platform6" parent="Ground" instance=ExtResource( 4 )]
+position = Vector2( -23.5684, -155.155 )
+scale = Vector2( 0.161375, 1.11211 )
+
+[node name="Platform2" parent="Ground" instance=ExtResource( 4 )]
+position = Vector2( -11.9462, -98.936 )
+scale = Vector2( 0.452279, 0.940941 )
+
+[node name="Platform5" parent="Ground" instance=ExtResource( 4 )]
+position = Vector2( -16.1667, -89.0891 )
+scale = Vector2( 0.0920335, 0.940941 )
+
+[node name="Platform3" parent="Ground" instance=ExtResource( 4 )]
+position = Vector2( -23.6658, -240.24 )
+scale = Vector2( 0.222439, 0.940941 )
+
+[node name="Platform4" parent="Ground" instance=ExtResource( 4 )]
+position = Vector2( -13.3424, -188.188 )
+scale = Vector2( 0.0905727, 0.547548 )
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
-position = Vector2( 416, 238 )
+visible = false
+position = Vector2( 207, 170 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
 
 [node name="Door2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 40, 240 )
+visible = false
+position = Vector2( 56, 115 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 83, 237 )
+position = Vector2( 59, 112 )
