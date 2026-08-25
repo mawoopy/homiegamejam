@@ -114,7 +114,7 @@ public class SceneManager : Node2D
     public void SetCurrentDoorId(int doorId)
     {
         _currentDoorId = doorId;
-        GD.Print("Called from SceneManager - Currenr Door ID Set to: " + _currentDoorId);
+        //GD.Print("Called from SceneManager - Currenr Door ID Set to: " + _currentDoorId);
     }
     public void AddDoorPosition(int id,Vector2 position)
     {

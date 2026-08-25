@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Objects/Platform.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Tools/BUTTon.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Tools/SceneManager.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Tools/PlayerStateChanger.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Visuals/Animations/Player/PlayerPhase2.tres" type="SpriteFrames" id=8]
 
 [node name="PlayerChanger" type="Node"]
 
@@ -34,6 +36,15 @@ position = Vector2( 339, 101 )
 
 [node name="Platform3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 274, 72 )
+
+[node name="PlayerStateChanger" parent="." instance=ExtResource( 7 )]
+Music = [ null, null, null, null, null ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 381, 110 )
+scale = Vector2( -0.1, 0.1 )
+frames = ExtResource( 8 )
+animation = "kill"
 
 [connection signal="EnterRoomEventHandler" from="Player" to="Door" method="LoadScene"]
 [connection signal="pressed" from="BUTTon" to="Player" method="OnButtonPressed"]

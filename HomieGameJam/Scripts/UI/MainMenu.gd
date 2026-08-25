@@ -1,14 +1,14 @@
 extends Panel
 
+onready var credits_panel = get_node("CreditsBG")
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	print("ready") # Replace with function body.
+	print("ready")
+	credits_panel.visible = false
+	 # Replace with function body.
+#	if credits_panel == false:
+#		print("False")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 func _on_Play_pressed():
 	print("Button Pressed")
 	get_tree().change_scene("res://Scenes/UI/PressPlayTest.tscn")
@@ -19,7 +19,12 @@ func _on_Options_pressed():
 
 
 func _on_Credits_pressed():
-	pass # Replace with function body.
+	print("credits")
+	credits_panel.visible = true
+	
+func _on_Back_pressed():
+	print("back")
+	credits_panel.visible = false
 
 
 func _on_Quit_pressed():
