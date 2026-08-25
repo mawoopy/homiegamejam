@@ -12,8 +12,11 @@ public enum SceneNames
 }
 public class SceneManager : Node2D
 {
+    private int _currentDoorId;
     public static SceneManager Instance;
-    public List<Vector2> DoorPositions = new List<Vector2>();
+    //public List<Vector2> DoorPositions = new List<Vector2>();
+    [Export]
+    public Dictionary<int, Vector2> DoorPositions = new Dictionary<int, Vector2>();
     public Dictionary<SceneNames, SceneData> SceneDictionary = new Dictionary<SceneNames, SceneData>()
     {
         {SceneNames.StartMenu, new SceneData("res://Scenes/Levels/TestSceneSwitch.tscn", "Start Menu", false)},
@@ -48,17 +51,33 @@ public class SceneManager : Node2D
     }
     public void ChangeScene(SceneNames sceneName)
     {
-       string scenePath = SceneDictionary[sceneName].Path;
-       GetTree().ChangeScene(scenePath);
-
-       
-       //Pass after loading position 
-       //GD.Print("Scene Changed to: " + sceneName.ToString());
+        string scenePath = SceneDictionary[sceneName].Path;
+        GetTree().ChangeScene(scenePath);
+        Timer timer = new Timer();
+        timer.WaitTime = 0.3f; // Set the delay time in seconds
+        timer.OneShot = true; // Set the timer to run only once
+        
+        MovePlayer();
+        
+        //Pass after loading position 
+        //GD.Print("Scene Changed to: " + sceneName.ToString());
     }
 
-    public void AddDoorPosition(Vector2 position)
+    private void MovePlayer()
     {
-        DoorPositions.Add(position);
+        //_currentDoorId =GetTree().CurrentScene.GetNode<Door>("Door").Id;
+        //Switch Logic to work with PLayerData (stored in SceneManager), find player in the scene and set its position to the corresponding door position based on the current door ID.
+        Player.Instance.Position = DoorPositions.TryGetValue(_currentDoorId, out Vector2 position) ? position : Player.Instance.Position;
+        GD.Print("Player Position Set to: " + Player.Instance.Position.ToString());
+    }
+
+    public void SetCurrentDoorId(int doorId)
+    {
+        _currentDoorId = doorId;
+        GD.Print("Called from SceneManager - Currenr Door ID Set to: " + _currentDoorId);
+    }
+    public void AddDoorPosition(int id,Vector2 position)
+    {
         GD.Print("Door Position Added: " + position.ToString());
     }
 
