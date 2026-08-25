@@ -25,6 +25,10 @@ window/size/height=270
 window/size/always_on_top=true
 window/stretch/aspect="expand"
 
+[global]
+
+autoload=false
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

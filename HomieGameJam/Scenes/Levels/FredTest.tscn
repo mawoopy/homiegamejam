@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Objects/Platform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Objects/Ground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Tools/BUTTon.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Tools/SceneManager.tscn" type="PackedScene" id=6]
 
 [node name="FredTest" type="Node"]
 
@@ -11,15 +14,27 @@ position = Vector2( 40, 175 )
 scale = Vector2( 8, 1 )
 
 [node name="Platform2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 226, 135 )
+position = Vector2( 175, 135 )
 scale = Vector2( 2, 1 )
 
 [node name="Ground" parent="." instance=ExtResource( 3 )]
 position = Vector2( 508, 179 )
 scale = Vector2( 10, 1.125 )
 
+[node name="Door" parent="." instance=ExtResource( 4 )]
+position = Vector2( 425, 128 )
+SceneToLoad = "F_RoomA"
+ENtrancePosition = Vector2( 220, 91 )
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 339, 101 )
-Speed = 65
-JumpSpeed = 30.0
-Gravity = 1750
+
+[node name="BUTTon" parent="." instance=ExtResource( 5 )]
+
+[node name="SceneManager" parent="." instance=ExtResource( 6 )]
+
+[node name="Platform3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 274, 72 )
+
+[connection signal="EnterRoomEventHandler" from="Player" to="Door" method="LoadScene"]
+[connection signal="pressed" from="BUTTon" to="Player" method="OnButtonPressed"]
