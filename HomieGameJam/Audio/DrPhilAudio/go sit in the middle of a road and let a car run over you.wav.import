@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/go sit in the middle of a road and let a car run over you.wav-27006b08877abeae8fa4c78383c9e545.sample"
+
+[deps]
+
+source_file="res://Audio/DrPhilAudio/go sit in the middle of a road and let a car run over you.wav"
+dest_files=[ "res://.import/go sit in the middle of a road and let a car run over you.wav-27006b08877abeae8fa4c78383c9e545.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
