@@ -24,7 +24,7 @@ scale = Vector2( 10, 1.125 )
 [node name="Door" parent="." instance=ExtResource( 4 )]
 position = Vector2( 425, 128 )
 SceneToLoad = "F_RoomA"
-ENtrancePosition = Vector2( 220, 91 )
+ENtrancePosition = Vector2( 425, 128 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 339, 101 )

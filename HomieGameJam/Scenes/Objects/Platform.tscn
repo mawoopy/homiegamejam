@@ -61,7 +61,6 @@ position = Vector2( 24, 4 )
 shape = SubResource( 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
-visible = false
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 collision_use_parent = true
