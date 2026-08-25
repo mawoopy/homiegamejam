@@ -7,7 +7,7 @@
 [ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Visuals/Backgrounds/phase2-3.png" type="Texture" id=6]
 [ext_resource path="res://Visuals/Objects/Final Assets/door final.png" type="Texture" id=7]
-[ext_resource path="res://Visuals/Objects/Final Assets/placeholder platform 2.png" type="Texture" id=8]
+[ext_resource path="res://Visuals/Objects/Final Assets/Platforms/placeholder platform 2.png" type="Texture" id=8]
 [ext_resource path="res://Visuals/Objects/Final Assets/platform left.jpg" type="Texture" id=9]
 [ext_resource path="res://Visuals/Objects/Final Assets/lighting.png" type="Texture" id=10]
 

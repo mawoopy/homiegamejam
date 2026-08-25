@@ -8,7 +8,7 @@
 [ext_resource path="res://Visuals/Backgrounds/phase2-1.png" type="Texture" id=6]
 [ext_resource path="res://Visuals/Objects/Final Assets/door final.png" type="Texture" id=7]
 [ext_resource path="res://Visuals/Objects/Final Assets/icicle.png" type="Texture" id=8]
-[ext_resource path="res://Visuals/Objects/Final Assets/placeholder platform 2.png" type="Texture" id=9]
+[ext_resource path="res://Visuals/Objects/Final Assets/Platforms/placeholder platform 2.png" type="Texture" id=9]
 [ext_resource path="res://Visuals/Objects/Final Assets/platform left.jpg" type="Texture" id=10]
 
 [node name="Level1" type="Node2D"]

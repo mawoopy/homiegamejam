@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Lvl_3_Pxld (1).png-e9531b7a19c8fabea1b20f6da904ba33.stex"
+path="res://.import/platform right.jpg-e315df50a1d814c756afdb97b74690fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/Objects/Final Assets/Lvl_3_Pxld (1).png"
-dest_files=[ "res://.import/Lvl_3_Pxld (1).png-e9531b7a19c8fabea1b20f6da904ba33.stex" ]
+source_file="res://Visuals/Objects/Final Assets/Platforms/platform right.jpg"
+dest_files=[ "res://.import/platform right.jpg-e315df50a1d814c756afdb97b74690fa.stex" ]
 
 [params]
 
