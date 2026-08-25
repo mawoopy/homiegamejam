@@ -25,7 +25,7 @@ position = Vector2( 102, 147 )
 [node name="Door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 220, 91 )
 SceneToLoad = "FredTest"
-ENtrancePosition = Vector2( 425, 128 )
+EntrancePosition = Vector2( 220, 91 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 170, 73 )

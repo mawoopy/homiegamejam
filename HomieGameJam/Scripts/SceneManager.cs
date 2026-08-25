@@ -13,7 +13,7 @@ public enum SceneNames
 public class SceneManager : Node2D
 {
     public static SceneManager Instance;
-
+    public List<Vector2> DoorPositions = new List<Vector2>();
     public Dictionary<SceneNames, SceneData> SceneDictionary = new Dictionary<SceneNames, SceneData>()
     {
         {SceneNames.StartMenu, new SceneData("res://Scenes/Levels/TestSceneSwitch.tscn", "Start Menu", false)},
@@ -50,7 +50,16 @@ public class SceneManager : Node2D
     {
        string scenePath = SceneDictionary[sceneName].Path;
        GetTree().ChangeScene(scenePath);
+
+       
+       //Pass after loading position 
        //GD.Print("Scene Changed to: " + sceneName.ToString());
+    }
+
+    public void AddDoorPosition(Vector2 position)
+    {
+        DoorPositions.Add(position);
+        GD.Print("Door Position Added: " + position.ToString());
     }
 
 }
