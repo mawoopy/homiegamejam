@@ -1,16 +1,28 @@
 using Godot;
 using System;
 
+
+
+public enum DeathState
+{
+	Phase1,
+	Phase2,
+	Phase3,
+	Phase4,
+}
 public class Player : KinematicBody2D
 {
 	public Vector2 ScreenSize; // Size of the game window.
+	
+	[Export]
+	public int Speed {get; set;} = 70; // How fast the player will move (pixels/sec).
+	[Export]
+	public float JumpSpeed {get; set;} = 30; 
+	[Export]
+	public int Gravity {get; set;} = 1750; 
 
-	[Export]
-	public int Speed {get; set;} = 100; // How fast the player will move (pixels/sec).
-	[Export]
-	public float JumpSpeed {get; set;} = 500; 
-	[Export]
-	public int Gravity; 
+	[Signal]
+	public delegate void EnterRoomEventHandler(); // Signal for entering a room.
 
 	private Vector2 _velocity = new Vector2(); // The player's movement vector.
 
@@ -20,7 +32,7 @@ public class Player : KinematicBody2D
 
 	private Vector2 _jumpTargetPosition;
 
-	public bool CanInteract; 
+	public bool CanInteract = false; 
 
 	public override void _Ready()
 	{
@@ -80,9 +92,26 @@ public class Player : KinematicBody2D
 			}
 
 
+			if(GetNode<Area2D>("InteractCheck").GetOverlappingAreas().Count > 0)
+			{
+
+				CanInteract = true;
+				//GD.Print("Can Interact");
+				
+			}
+			else
+			{
+				CanInteract = false;
+			}
 			
 
-			if(Input.IsActionJustPressed("jump") && Input.IsActionPressed("move_down"))
+			if(Input.IsActionJustPressed("jump") && CanInteract || Input.IsActionJustPressed("move_up") && CanInteract)
+			{
+				EmitSignal("EnterRoomEventHandler");
+
+
+			}
+			else if(Input.IsActionJustPressed("jump") && Input.IsActionPressed("move_down"))
 			{
 				if (GetNode<Area2D>("FallableCheck").GetOverlappingAreas().Count > 0)
 				{
@@ -90,7 +119,7 @@ public class Player : KinematicBody2D
 					_jumpTargetPosition = new Vector2(Position.x, Position.y +_jumpHeight/2);
 					Position = Position.LinearInterpolate(_jumpTargetPosition, 0.5f);
 				}
-
+				
 				
 			}
 			else if (Input.IsActionJustPressed("jump"))
@@ -111,6 +140,7 @@ public class Player : KinematicBody2D
 			
 			
 		}
+		
 
 
 			
@@ -151,7 +181,11 @@ public class Player : KinematicBody2D
 			_velocity.y += Gravity * (float)delta;
 		}
 		//MoveAndCollide(_velocity * (float)delta);
-		MoveAndSlide(_velocity, Vector2.Up,infiniteInertia:false);
+		MoveAndSlide(_velocity, Vector2.Up,infiniteInertia:false);}
+
+		
+
+
 		 
 
 	}
@@ -160,4 +194,4 @@ public class Player : KinematicBody2D
 
 	
 
-}
+

@@ -7,7 +7,7 @@
 [ext_resource path="res://Scenes/Tools/BUTTon.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Tools/SceneManager.tscn" type="PackedScene" id=6]
 
-[node name="FredTest" type="Node"]
+[node name="PlayerChanger" type="Node"]
 
 [node name="Platform" parent="." instance=ExtResource( 2 )]
 position = Vector2( 40, 175 )

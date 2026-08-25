@@ -2,25 +2,25 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dr_phil.png-1c83e49fb49d39940f8532227e54f4d5.stex"
+path="res://.import/PLATFORM_1.2_FILL.png-a1c11e43a09024df557f8ee0328016e3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/Characters/DrPhil/dr_phil.png"
-dest_files=[ "res://.import/dr_phil.png-1c83e49fb49d39940f8532227e54f4d5.stex" ]
+source_file="res://Visuals/Objects/PLATFORM_1.2_FILL.png"
+dest_files=[ "res://.import/PLATFORM_1.2_FILL.png-a1c11e43a09024df557f8ee0328016e3.stex" ]
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
