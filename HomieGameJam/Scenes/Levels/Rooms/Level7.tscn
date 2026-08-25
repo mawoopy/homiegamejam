@@ -21,10 +21,6 @@ __meta__ = {
 position = Vector2( -153, -17 )
 texture = ExtResource( 7 )
 
-[node name="DoorFinal2" type="Sprite" parent="Background"]
-position = Vector2( 183, -65 )
-texture = ExtResource( 7 )
-
 [node name="SceneManager" parent="." instance=ExtResource( 2 )]
 
 [node name="Ground" parent="." instance=ExtResource( 3 )]
@@ -342,14 +338,7 @@ visible = false
 position = Vector2( 28, 141 )
 scale = Vector2( 2.466, 1.842 )
 
-[node name="Door" parent="." instance=ExtResource( 5 )]
-visible = false
-position = Vector2( 422, 70 )
-SceneToLoad = "FredTest"
-ENtrancePosition = Vector2( 425, 128 )
-
 [node name="Door2" parent="." instance=ExtResource( 5 )]
-visible = false
 position = Vector2( 84, 117 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )

@@ -30,14 +30,7 @@ position = Vector2( 149, 163 )
 visible = false
 position = Vector2( 72, 196 )
 
-[node name="Door" parent="." instance=ExtResource( 5 )]
-visible = false
-position = Vector2( 382, 239 )
-SceneToLoad = "FredTest"
-ENtrancePosition = Vector2( 425, 128 )
-
 [node name="Door2" parent="." instance=ExtResource( 5 )]
-visible = false
 position = Vector2( 40, 240 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
@@ -47,8 +40,4 @@ position = Vector2( 83, 237 )
 
 [node name="DoorFinal" type="Sprite" parent="."]
 position = Vector2( 40, 245 )
-texture = ExtResource( 7 )
-
-[node name="DoorFinal2" type="Sprite" parent="."]
-position = Vector2( 382, 245 )
 texture = ExtResource( 7 )
