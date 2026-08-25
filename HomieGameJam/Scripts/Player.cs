@@ -5,10 +5,9 @@ using System;
 
 public enum DeathState
 {
+	Phase0,
 	Phase1,
 	Phase2,
-	Phase3,
-	Phase4,
 }
 public class Player : KinematicBody2D
 {
@@ -30,13 +29,16 @@ public class Player : KinematicBody2D
 
 	private AnimatedSprite _animatedSprite;
 
-	private float _jumpHeight = 200f;
+	private float _jumpHeight = 100f;
 
 	private Vector2 _jumpTargetPosition;
 
 	public bool CanInteract = false; 
 
 	private Area2D _interactCheckArea;
+
+	//private Vector2 deathAnimationPeak;
+
 
 	public override void _Ready()
 	{
@@ -202,7 +204,13 @@ public class Player : KinematicBody2D
 		
 
 
-		 
+		 public void Dying()
+	{
+		float deathPeak = Position.y - 100;
+		float deathEnd = Position.y + 100;
+
+		//Position = Position.LinearInterpolate();
+	}
 
 	}
 
