@@ -38,15 +38,15 @@ public class Player : KinematicBody2D
 
 	public override void _Ready()
 	{
-		if(Instance != null)
-        {
-        	QueueFree();
+		// if(Instance != null)
+        // {
+        // 	QueueFree();
 
-        }
-        else
-        {
-            Instance = this; 
-        }
+        // }
+        // else
+        // {
+        //     Instance = this; 
+        // }
 		ScreenSize = GetViewportRect().Size;
 	
 		_animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");

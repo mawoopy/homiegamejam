@@ -34,8 +34,7 @@ position = Vector2( 339, 101 )
 
 [node name="SceneManager" parent="." instance=ExtResource( 6 )]
 DoorPositions = {
-1: Vector2( 425, 128 ),
-2: Vector2( 220, 91 )
+1: Vector2( 425, 128 )
 }
 
 [node name="Platform3" parent="." instance=ExtResource( 2 )]

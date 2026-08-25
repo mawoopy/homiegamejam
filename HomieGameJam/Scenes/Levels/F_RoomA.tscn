@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Objects/Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Objects/Ground.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Objects/Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Characters/Player.tscn" type="PackedScene" id=4]
 
 [node name="F_RoomA" type="Node"]
 
@@ -23,3 +24,8 @@ position = Vector2( 220, 91 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 220, 91 )
 Id = 2
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 176, 87 )
+
+[connection signal="EnterRoomEventHandler" from="Player" to="Door" method="LoadScene"]

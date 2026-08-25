@@ -26,7 +26,7 @@ public int Id;
     {
         GD.Print("KILL YOURSELF");
         GetNode<SceneManager>("/root/SceneManager").ChangeScene((SceneNames)Enum.Parse(typeof(SceneNames), SceneToLoad));   
-        GetNode<SceneManager>("/root/SceneManager").SetCurrentDoorId(Id);
+        //GetNode<SceneManager>("/root/SceneManager").SetCurrentDoorId(Id);
         GD.Print("Id Set to: " + Id);
     }
 
