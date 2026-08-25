@@ -12,6 +12,8 @@ public enum DeathState
 }
 public class Player : KinematicBody2D
 {
+	public static Player Instance; // Singleton instance of the player.
+	public static DeathState CurrentDeathState;
 	public Vector2 ScreenSize; // Size of the game window.
 	
 	[Export]
@@ -36,14 +38,23 @@ public class Player : KinematicBody2D
 
 	public override void _Ready()
 	{
+		// if(Instance != null)
+        // {
+        // 	QueueFree();
+
+        // }
+        // else
+        // {
+        //     Instance = this; 
+        // }
 		ScreenSize = GetViewportRect().Size;
 	
 		_animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
 		
 		_animatedSprite.Play("idle");
-
+		//GD.Print(Position.ToString());
 	}
-
+	
 
 	public override void _Process(float delta)
 	{
@@ -63,6 +74,7 @@ public class Player : KinematicBody2D
 		{
 			_animatedSprite.Play("idle");
 		}
+		//GD.Print("Player Position: " + Position.ToString());
 	}
 
 	public override void _PhysicsProcess(float delta)
