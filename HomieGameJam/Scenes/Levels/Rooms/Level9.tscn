@@ -9,7 +9,7 @@
 [ext_resource path="res://Visuals/Objects/Final Assets/door final.png" type="Texture" id=7]
 [ext_resource path="res://Visuals/Objects/Final Assets/Death.png" type="Texture" id=8]
 
-[node name="Level1" type="Node2D"]
+[node name="Level3" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 240, 135 )
