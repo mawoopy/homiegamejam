@@ -20,7 +20,7 @@ public int Id;
     public override void _Ready()
     {
         
-        GD.Print("Door Ready: " + SceneToLoad + " Entrance Position: " + ENtrancePosition.ToString() + " ID: " + Id);
+        //GD.Print("Door Ready: " + SceneToLoad + " Entrance Position: " + ENtrancePosition.ToString() + " ID: " + Id);
     }
 
     public void LoadScene()

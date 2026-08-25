@@ -3,10 +3,9 @@ using System;
 
 public enum PlayerStates
 {
-    Phase1,
+    Phase0,
+	Phase1,
 	Phase2,
-	Phase3,
-	Phase4,
 }
 
 public class PlayerStateChanger : Node
