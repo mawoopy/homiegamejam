@@ -8,6 +8,8 @@ public string SceneToLoad;
 
 [Export]
 public Vector2 ENtrancePosition;
+
+public bool CanInteract;
 [Export]
 public int Id;
 
@@ -28,6 +30,34 @@ public int Id;
         GetNode<SceneManager>("/root/SceneManager").ChangeScene((SceneNames)Enum.Parse(typeof(SceneNames), SceneToLoad));   
         //GetNode<SceneManager>("/root/SceneManager").SetCurrentDoorId(Id);
         GD.Print("Id Set to: " + Id);
+    }
+
+    public override void _PhysicsProcess(float delta)
+    {
+        
+        CheckIfCanInteract();
+        if (CanInteract && Input.IsActionJustPressed("move_up"))
+        {
+            GetNode<SceneManager>("/root/SceneManager").SetCurrentDoorId(Id);
+        }
+         
+    }
+		
+
+
+    public void CheckIfCanInteract()
+    {
+         if(GetOverlappingAreas().Count > 0)
+			{
+
+				CanInteract = true;
+
+				
+			}
+            else
+            {
+                CanInteract = false;
+            }
     }
 
 
