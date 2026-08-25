@@ -29,7 +29,6 @@ scale = Vector2( 10.268, 0.999 )
 position = Vector2( 38, 246 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
-Id = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 83, 237 )

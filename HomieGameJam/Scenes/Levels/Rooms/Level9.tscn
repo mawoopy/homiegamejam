@@ -433,18 +433,6 @@ scale = Vector2( 0.0485976, 1.001 )
 position = Vector2( 5.45384, -123.123 )
 scale = Vector2( 0.0485976, 1.001 )
 
-[node name="Platform12" parent="Ground" instance=ExtResource( 4 )]
-position = Vector2( 13.6346, -99.0991 )
-scale = Vector2( 0.0485976, 1.001 )
-
-[node name="Platform13" parent="Ground" instance=ExtResource( 4 )]
-position = Vector2( 15.7772, -88.0881 )
-scale = Vector2( 0.0485976, 1.001 )
-
-[node name="Platform14" parent="Ground" instance=ExtResource( 4 )]
-position = Vector2( 10.9077, -90.0901 )
-scale = Vector2( 0.0485976, 1.001 )
-
 [node name="Platform17" parent="Ground" instance=ExtResource( 4 )]
 position = Vector2( 9.44683, -58.058 )
 scale = Vector2( 0.0485976, 1.001 )
@@ -534,13 +522,12 @@ visible = false
 position = Vector2( 80, 171 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
-Id = 1
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 76, 172 )
 
 [node name="Dr Phil Death Head" type="Sprite" parent="."]
-position = Vector2( 315, 61 )
+position = Vector2( 429, 214 )
 scale = Vector2( 0.746094, 0.75 )
 texture = ExtResource( 8 )
 

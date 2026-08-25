@@ -29,7 +29,6 @@ scale = Vector2( 10.268, 0.999 )
 position = Vector2( 239, 193 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
-Id = 1
 
 [node name="DoorFinal2" type="Sprite" parent="Door2"]
 position = Vector2( 0, 1 )
@@ -39,7 +38,7 @@ texture = ExtResource( 4 )
 position = Vector2( 244, 193 )
 
 [node name="VatofAcid" type="Sprite" parent="."]
-position = Vector2( 238, 250 )
+position = Vector2( 318, 250 )
 scale = Vector2( 0.877599, 0.821738 )
 texture = ExtResource( 8 )
 
