@@ -43,14 +43,14 @@ public class SceneManager : Node2D
 
     public void OnButtonPressed()
     {
-        GD.Print("Button Pressed");
+        //GD.Print("Button Pressed");
         ChangeScene(SceneNames.MainScene);
     }
     public void ChangeScene(SceneNames sceneName)
     {
        string scenePath = SceneDictionary[sceneName].Path;
        GetTree().ChangeScene(scenePath);
-       GD.Print("Scene Changed to: " + sceneName.ToString());
+       //GD.Print("Scene Changed to: " + sceneName.ToString());
     }
 
 }

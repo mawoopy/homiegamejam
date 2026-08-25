@@ -24,6 +24,6 @@ margin_top = 200.0
 margin_right = 243.0
 margin_bottom = 220.0
 
-[connection signal="pressed" from="Button" to="SceneManager" method="on_button_down"]
 [connection signal="pressed" from="Button" to="SceneManager" method="OnButtonPressed"]
+[connection signal="pressed" from="Button" to="SceneManager" method="on_button_down"]
 [connection signal="pressed" from="BUTTon" to="SceneManager" method="OnButtonPressed"]
