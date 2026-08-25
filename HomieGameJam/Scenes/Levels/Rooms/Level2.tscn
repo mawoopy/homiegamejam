@@ -23,7 +23,7 @@ position = Vector2( 241, 293 )
 scale = Vector2( 10.268, 0.999 )
 
 [node name="Platform" parent="." instance=ExtResource( 4 )]
-position = Vector2( 136, 224 )
+position = Vector2( 89, 222 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -36,20 +36,190 @@ texture = ExtResource( 10 )
 position = Vector2( 24, 3 )
 texture = ExtResource( 8 )
 
+[node name="Platform2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 154, 184 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform2"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform2"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 204, 220 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform3"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform3"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 204, 220 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform4"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform4"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 265, 183 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform5"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform5"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 324, 147 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform6"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform6"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 378, 105 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform7"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform7"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 331, 65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform8"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform8"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 265, 95 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform9"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform9"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 202, 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform10"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform10"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 136, 95 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform11"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform11"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 85, 67 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform12"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform12"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
+[node name="Platform13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 30, 95 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PlatformLeft" type="Sprite" parent="Platform13"]
+position = Vector2( 9, 3 )
+texture = ExtResource( 10 )
+
+[node name="PlaceholderPlatform2" type="Sprite" parent="Platform13"]
+position = Vector2( 24, 3 )
+texture = ExtResource( 8 )
+
 [node name="DoorFinal" type="Sprite" parent="."]
 position = Vector2( 38, 247 )
 texture = ExtResource( 7 )
 
 [node name="DoorFinal2" type="Sprite" parent="."]
-position = Vector2( 52, 71 )
+position = Vector2( 54, 65 )
 texture = ExtResource( 7 )
 
 [node name="Door" parent="." instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 52, 67 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
 
 [node name="Door2" parent="." instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 37, 244 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
