@@ -384,7 +384,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 14 ) ],
-"loop": true,
+"loop": false,
 "name": "explosionbad",
 "speed": 5.0
 } ]
