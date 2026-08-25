@@ -29,6 +29,7 @@ scale = Vector2( 10.268, 0.999 )
 position = Vector2( 239, 193 )
 SceneToLoad = "FredTest"
 ENtrancePosition = Vector2( 425, 128 )
+Id = 1
 
 [node name="DoorFinal2" type="Sprite" parent="Door2"]
 position = Vector2( 0, 1 )

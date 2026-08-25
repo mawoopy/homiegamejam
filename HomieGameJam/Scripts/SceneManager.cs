@@ -6,9 +6,14 @@ public enum SceneNames
 {
     StartMenu = 0,
     MainScene = 1,
-    Interior = 2, //Rename
-    F_RoomA = 3,
-    FredTest = 4,
+    Level2 = 2,
+    Level3 = 3,
+    Level4 = 4,
+    Level5 = 5,
+    Level6 = 6,
+    Level7 = 7,
+    Level8 = 8,
+    Level9 = 9,
 }
 public class PlayerData
 {
@@ -32,10 +37,20 @@ public class SceneManager : Node2D
     public Dictionary<SceneNames, SceneData> SceneDictionary = new Dictionary<SceneNames, SceneData>()
     {
         {SceneNames.StartMenu, new SceneData("res://Scenes/Levels/TestSceneSwitch.tscn", "Start Menu", false)},
-        {SceneNames.MainScene, new SceneData("res://Scenes/Levels/TestSceneSwitch2.tscn", "Main Scene", false)},
-        {SceneNames.Interior, new SceneData("res://Scenes/Levels/TestSceneSwitch3.tscn", "Interior", false)},
-        {SceneNames.F_RoomA, new SceneData("res://Scenes/Levels/F_RoomA.tscn", "F_RoomA", false)},
-        {SceneNames.FredTest, new SceneData("res://Scenes/Levels/FredTest.tscn", "FredTest", false)},
+        {SceneNames.MainScene, new SceneData("res://Scenes/Levels/Rooms/Main.tscn", "Main Scene", false)},
+        {SceneNames.Level2, new SceneData("res://Scenes/Levels/Rooms/Level2.tscn", "Main Scene", false)},
+        {SceneNames.Level3, new SceneData("res://Scenes/Levels/Rooms/Level3.tscn", "Main Scene", false)},
+        {SceneNames.Level4, new SceneData("res://Scenes/Levels/Rooms/Level4.tscn", "Main Scene", false)},
+        {SceneNames.Level5, new SceneData("res://Scenes/Levels/Rooms/Level5.tscn", "Main Scene", false)},
+        {SceneNames.Level6, new SceneData("res://Scenes/Levels/Rooms/Level6.tscn", "Main Scene", false)},
+        {SceneNames.Level7, new SceneData("res://Scenes/Levels/Rooms/Level7.tscn", "Main Scene", false)},
+        {SceneNames.Level8, new SceneData("res://Scenes/Levels/Rooms/Level8.tscn", "Main Scene", false)},
+        {SceneNames.Level9, new SceneData("res://Scenes/Levels/Rooms/Level9.tscn", "Main Scene", false)},
+        // {SceneNames.StartMenu, new SceneData("res://Scenes/Levels/TestSceneSwitch.tscn", "Start Menu", false)},
+        // {SceneNames.MainScene, new SceneData("res://Scenes/Levels/TestSceneSwitch2.tscn", "Main Scene", false)},
+        // {SceneNames.Interior, new SceneData("res://Scenes/Levels/TestSceneSwitch3.tscn", "Interior", false)},
+        // {SceneNames.F_RoomA, new SceneData("res://Scenes/Levels/F_RoomA.tscn", "F_RoomA", false)},
+        // {SceneNames.FredTest, new SceneData("res://Scenes/Levels/FredTest.tscn", "FredTest", false)},
     };
 
     
@@ -59,19 +74,22 @@ public class SceneManager : Node2D
     }
 
 
-    public void OnButtonPressed()
+    // public void OnButtonPressed()
+    // {
+    //     //GD.Print("Button Pressed");
+    //     ChangeScene(SceneNames.MainScene);
+    // }
+    //public void ChangeSceneWithId(int id,SceneNames sceneName)
+    public void ChangeSceneWithId(int id)
     {
-        //GD.Print("Button Pressed");
-        ChangeScene(SceneNames.MainScene);
-    }
-    public void ChangeScene(SceneNames sceneName)
-    {
+        SceneNames sceneName = (SceneNames)id;
+        
         string scenePath = SceneDictionary[sceneName].Path;
         GetTree().ChangeScene(scenePath);
         Timer timer = new Timer();
         timer.WaitTime = 0.3f; // Set the delay time in seconds
         timer.OneShot = true; // Set the timer to run only once
-        _currentDoorId = GetTree().CurrentScene.GetNode<Door>("Door").Id;
+        //_currentDoorId = GetTree().CurrentScene.GetNode<Door>("Door").Id;
         MovePlayer();
         
         //Pass after loading position 

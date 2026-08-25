@@ -30,11 +30,13 @@ public class Player : KinematicBody2D
 
 	private AnimatedSprite _animatedSprite;
 
-	private float _jumpHeight = 100f;
+	private float _jumpHeight = 200f;
 
 	private Vector2 _jumpTargetPosition;
 
 	public bool CanInteract = false; 
+
+	private Area2D _interactCheckArea;
 
 	public override void _Ready()
 	{
@@ -108,6 +110,8 @@ public class Player : KinematicBody2D
 			{
 
 				CanInteract = true;
+
+				_interactCheckArea = GetNode<Area2D>("InteractCheck").GetOverlappingAreas()[0] as Area2D;
 				//GD.Print("Can Interact");
 				
 			}
@@ -117,10 +121,10 @@ public class Player : KinematicBody2D
 			}
 			
 
-			if(Input.IsActionJustPressed("jump") && CanInteract || Input.IsActionJustPressed("move_up") && CanInteract)
+			if(Input.IsActionJustPressed("move_up") && CanInteract)
 			{
-				EmitSignal("EnterRoomEventHandler");
-
+				//EmitSignal("EnterRoomEventHandler");
+				//_interactCheckArea.GetScript().Call("LoadScene");
 
 			}
 			else if(Input.IsActionJustPressed("jump") && Input.IsActionPressed("move_down"))
