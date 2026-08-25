@@ -2,25 +2,25 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Monito_Jump_1.png-e35dce477becfc9e9901d5eaf912a114.stex"
+path="res://.import/explosion 2.png-87f603bd38d6dfc29cb26a0e6b748b8a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/Characters/Monito/Monito_Jump_1.png"
-dest_files=[ "res://.import/Monito_Jump_1.png-e35dce477becfc9e9901d5eaf912a114.stex" ]
+source_file="res://Visuals/Animations/Explosion/explosion 2.png"
+dest_files=[ "res://.import/explosion 2.png-87f603bd38d6dfc29cb26a0e6b748b8a.stex" ]
 
 [params]
 
-compress/mode=3
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

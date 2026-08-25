@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Monito_Jump_1.png-e35dce477becfc9e9901d5eaf912a114.stex"
+path="res://.import/player4.png-da29efa1e6cd4e23d01140d4d339e540.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/Characters/Monito/Monito_Jump_1.png"
-dest_files=[ "res://.import/Monito_Jump_1.png-e35dce477becfc9e9901d5eaf912a114.stex" ]
+source_file="res://Visuals/Characters/player4.png"
+dest_files=[ "res://.import/player4.png-da29efa1e6cd4e23d01140d4d339e540.stex" ]
 
 [params]
 
