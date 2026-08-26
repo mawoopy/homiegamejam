@@ -39,6 +39,11 @@ public class Player : KinematicBody2D
 
 	//private Vector2 deathAnimationPeak;
 
+	public bool IsDying;
+
+
+	private Timer deadTimer;
+
 
 	public override void _Ready()
 	{
@@ -57,6 +62,8 @@ public class Player : KinematicBody2D
 		
 		_animatedSprite.Play("idle");
 		//GD.Print(Position.ToString());
+
+		deadTimer = GetNode<Timer>("DeadTimer");
 	}
 	
 
@@ -204,12 +211,12 @@ public class Player : KinematicBody2D
 		
 
 
-		 public void Dying()
+		 public void Die()
 	{
-		float deathPeak = Position.y - 100;
-		float deathEnd = Position.y + 100;
+		var animator = GetNode<AnimationPlayer>("DieAnimation");
+		
+		deadTimer.Start(animator.GetAnimation("Die").Length);
 
-		//Position = Position.LinearInterpolate();
 	}
 
 	}
