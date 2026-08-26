@@ -23,9 +23,9 @@ public class DrPhil : Node2D
         TalkDurationTimer = GetNode<Timer>("TalkDurationTimer");
         StartTalkTimer = GetNode<Timer>("StartTalkTimer");
        
-        _audioStreamPlayer = GetTree().CurrentScene.GetNode<AudioStreamPlayer2D>("VoiceSource");
+        //_audioStreamPlayer = GetTree().CurrentScene.GetNode<AudioStreamPlayer2D>("VoiceSource");
 
-       // _audioStreamPlayer = GetNode<AudioStreamPlayer>("VoiceSource");
+       _audioStreamPlayer = GetNode<AudioStreamPlayer2D>("VoiceSource");
 
         RunAudioClipByIndex(0);
     }

@@ -38,7 +38,6 @@ position = Vector2( 339, 101 )
 position = Vector2( 274, 72 )
 
 [node name="PlayerStateChanger" parent="." instance=ExtResource( 7 )]
-Music = [ null, null, null, null, null ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 381, 110 )
